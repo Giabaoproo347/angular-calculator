@@ -1,0 +1,28 @@
+<h2>Calculator</h2>
+<label>First number</label>
+<input type="number" class="form-control-sm"
+        [value]="firstNumber"
+        (change)="onFirstNumber($event.target.value)">
+<br/>
+<select class="form-control"
+[value]="operator"
+(change)="onSelect($event.target.value)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">x</option>
+  <option value="/">/</option>
+</select>
+
+<br/>
+<label>Second number</label>
+<input type="number" class="form-control-sm"
+        [value]="secondNumber"
+        (change)="onSecondNumber($event.target.value)">
+
+<button class="form-control-sm" (click)="calculate()">
+    Tính toán
+</button>
+
+<label>Result:</label>
+<span class="alert-danger">{{output}}</span>
+
